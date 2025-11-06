@@ -8,10 +8,11 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+  <h1>Employee Registration Form</h1>
   <div class="container">
-    <form action="index.html" enctype="multipart/form-data">
+    <form enctype="multipart/form-data">
       <fieldset>
-        <legend>Personal Information</legend>
+        <legend class="titles">Personal Information</legend>
         <label>
           <span>First Name</span>
           <input type="text" name="firstname" id="firstname" autocomplete="off">
@@ -22,7 +23,7 @@
         </label>
         <label>
           <span>Email</span>
-          <input type="email" name="email" id="email" autocomplete="off">
+          <input type="email" name="email" id="email" autocomplete="off" pattern="[a-zA-Z0-9._%+-]+@canada\.ca$">
         </label>
         <label>
           <span>Hire Date</span>
@@ -30,14 +31,14 @@
         </label>
       </fieldset>
       <fieldset>
-        <legend>Profile Photo</legend>
+        <legend class="titles">Profile Photo</legend>
         <label>
           <span>Upload photo</span>
           <input type="file" name="photo" accept=".jpg, .png">
         </label>
       </fieldset>
       <fieldset class="form__btns">
-        <legend>Confirm Submission</legend>
+        <legend class="titles">Confirm Submission</legend>
         <button type="reset">Reset</button>
         <button type="submit">Add Employee</button>
       </fieldset>

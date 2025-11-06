@@ -1,18 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 1280px;
+  max-width: 1600px;
   width: 100%;
   margin: auto;
+  padding: 0 1rem;
 }
 @media (min-width: 1024px) {
   .container {
@@ -20,18 +28,30 @@ body {
   }
 }
 .container form {
-  flex: 1;
+  flex: 1.2;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+.container form .titles {
+  font-weight: 500;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 3px 10px;
 }
 .container form fieldset {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  border: none;
 }
 .container form fieldset legend {
-  font-weight: 700;
+  font-weight: 400;
 }
 .container form fieldset label {
   display: flex;
@@ -41,6 +61,29 @@ body {
 .container form fieldset label input {
   flex: 1;
   padding: 0.25rem;
+  border-radius: 5px;
+  font-family: "montserrat", sans-serif;
+  border: 1px solid #ddd;
+}
+.container form fieldset label input[type=file] {
+  background-color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.container form fieldset label input[type=file]::file-selector-button {
+  padding: 0.25rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #a2a2a2;
+  color: white;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  margin-right: 0.75rem;
+  transition: background-color 0.2s;
+}
+.container form fieldset label input[type=file]::file-selector-button:hover {
+  background-color: #505050;
 }
 .container form fieldset.form__btns {
   display: flex;
@@ -50,6 +93,77 @@ body {
 .container form fieldset.form__btns button {
   flex: 1;
   padding: 0.25rem;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.container form fieldset.form__btns button[type=submit] {
+  background-color: #687efb;
+  color: white;
+  border: none;
+}
+.container form fieldset.form__btns button[type=submit]:hover {
+  background-color: #5a6fbf;
+}
+.container form fieldset.form__btns button[type=reset] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+.container form fieldset.form__btns button[type=reset]:hover {
+  background-color: #45a049;
+}
+
+#employees {
+  flex: 1.5;
+  min-width: 600px;
+  overflow-x: auto;
+}
+#employees tr th:first-child {
+  border-radius: 5px 0 0 0;
+}
+#employees tr th:last-child {
+  border-radius: 0 5px 0 0;
+}
+#employees table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+#employees thead {
+  background-color: #f0f0f0;
+  border-radius: 5px 5px 0 0;
+}
+#employees th {
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+#employees td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+#employees td img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+#employees .delete-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+#employees .delete-btn:hover {
+  background-color: #cc0000;
 }
 
 /*# sourceMappingURL=styles.css.map */
